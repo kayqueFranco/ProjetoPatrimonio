@@ -41,7 +41,7 @@ class Localizacao(QWidget):
 
         # numero QLineEdit
         self.edit_numero = QLineEdit()
-        self.edit_numero.setStyleSheet("QLIneEdit{font-size:12pt}")
+        self.edit_numero.setStyleSheet("QLineEdit{font-size:12pt}")
 
         # Prédio QLabel
         self.label_predio = QLabel("Prédio:")

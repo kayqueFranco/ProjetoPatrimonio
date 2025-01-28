@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QVBoxLayout, QPushButton
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QVBoxLayout, QPushButton, QMessageBox
 import sys
 
 class Patrimonio(QWidget):
@@ -145,6 +145,7 @@ class Patrimonio(QWidget):
         arquivo.write(f"Data da aquisição {self.edit_DataAquisicao.text()}\n")
         arquivo.write("-----------------------------------------------")
         arquivo.close()
+        QMessageBox.information(self,"Salvo", "Os dados do Patrimônio foram salvos")
 
 # app = QApplication(sys.argv)
 # Instância da classe CadastroCliente
