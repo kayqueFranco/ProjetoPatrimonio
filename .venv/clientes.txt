@@ -1,9 +1,0 @@
-Id :25645
-Numero de serie: 54136465
-Nome do patrimonio: kayquhd
-Tipo: pc
-Descriçao: pc mt bom
-Localizaçao: tatuape
-Data da fabricaçao: 2025
-Data da aquisiçao 2025
------------------------------------------------

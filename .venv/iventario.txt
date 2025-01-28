@@ -1,0 +1,9 @@
+Id :235453
+Número de série: 235346
+Nome do patrimônio: mesa
+Tipo: mesa com madeira macissa
+Descrição: mesa com madeira boA
+Localização: SALA12
+Data da fabricação: 12/2/2025
+Data da aquisição 15/02/2025
+-----------------------------------------------

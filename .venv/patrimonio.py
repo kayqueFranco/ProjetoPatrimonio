@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QVBoxLayout, QPushButton
 import sys
 
-class cadastropatrimoio(QWidget):
+class Patrimonio(QWidget):
     def __init__(self):
         super().__init__()
 
@@ -134,24 +134,24 @@ class cadastropatrimoio(QWidget):
     def cadastrar(self):
         #  Vamos criar uma variavel que fará
         # referência ao um arquivo de texto
-        arquivo = open("clientes.txt","+a")
+        arquivo = open("iventario.txt","+a",encoding="utf8")
         arquivo.write(f"Id :{self.edit_id.text()}\n")
-        arquivo.write(f"Numero de serie: {self.edit_numerodeserie.text()}\n")
-        arquivo.write(f"Nome do patrimonio: {self.edit_nomedopatrimonio.text()}\n")
+        arquivo.write(f"Número de série: {self.edit_numerodeserie.text()}\n")
+        arquivo.write(f"Nome do patrimônio: {self.edit_nomedopatrimonio.text()}\n")
         arquivo.write(f"Tipo: {self.edit_tipo.text()}\n")
-        arquivo.write(f"Descriçao: {self.edit_descricao.text()}\n")
-        arquivo.write(f"Localizaçao: {self.edit_localizacao.text()}\n")
-        arquivo.write(f"Data da fabricaçao: {self.edit_DataFabricacao.text()}\n")
-        arquivo.write(f"Data da aquisiçao {self.edit_DataAquisicao.text()}\n")
+        arquivo.write(f"Descrição: {self.edit_descricao.text()}\n")
+        arquivo.write(f"Localização: {self.edit_localizacao.text()}\n")
+        arquivo.write(f"Data da fabricação: {self.edit_DataFabricacao.text()}\n")
+        arquivo.write(f"Data da aquisição {self.edit_DataAquisicao.text()}\n")
         arquivo.write("-----------------------------------------------")
         arquivo.close()
 
-app = QApplication(sys.argv)
+# app = QApplication(sys.argv)
 # Instância da classe CadastroCliente
 # para iniciar a janela 
-tela = cadastropatrimoio()
+# tela = Patrimonio()
 #exibir a tela duarante a execução
-tela.show()
+# tela.show()
 #  Ao clicar no botão fechar a tela
 # deve fechar e sair da memória
-app.exec()
+# app.exec()
