@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QVBoxLayout, QPushButton
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QVBoxLayout, QPushButton, QMessageBox
 import sys
 
 class Localizacao(QWidget):
@@ -111,16 +111,21 @@ class Localizacao(QWidget):
     def cadastrar(self):
         #  Vamos criar uma variavel que fará
         # referência ao um arquivo de texto
-        arquivo = open("Localização.txt","+a",encoding="utf8")
-        arquivo.write(f"Id :{self.edit_id.text()}\n")
-        arquivo.write(f"Empresa: {self.edit_emprsa.text()}\n")
-        arquivo.write(f"logradouro: {self.edit_logradouro.text()}\n")
-        arquivo.write(f"Número: {self.edit_numero.text()}\n")
-        arquivo.write(f"Prédio: {self.edit_predio.text()}\n")
-        arquivo.write(f"Andar: {self.edit_andar.text()}\n")
-        arquivo.write(f"Sala: {self.edit_sala.text()}\n")
-        arquivo.write("-----------------------------------------------")
-        arquivo.close()
+
+         if(self.edit_id.text()=="" or self.edit_emprsa.text()=="" or self.edit_logradouro.text()=="" or self.edit_numero.text()=="" or self.edit_predio.text()=="" or self.edit_andar.text()=="" or self.edit_sala.text()=="" ):
+            QMessageBox.critical(self,"ERRO","Você deve prencher todos os campos")
+         else:
+            arquivo = open("Localização.txt","+a",encoding="utf8")
+            arquivo.write(f"Id :{self.edit_id.text()}\n")
+            arquivo.write(f"Empresa: {self.edit_emprsa.text()}\n")
+            arquivo.write(f"logradouro: {self.edit_logradouro.text()}\n")
+            arquivo.write(f"Número: {self.edit_numero.text()}\n")
+            arquivo.write(f"Prédio: {self.edit_predio.text()}\n")
+            arquivo.write(f"Andar: {self.edit_andar.text()}\n")
+            arquivo.write(f"Sala: {self.edit_sala.text()}\n")
+            arquivo.write("-----------------------------------------------")
+            arquivo.close()
+            QMessageBox.information(self,"Salvo", "Os dados do Patrimônio foram salvos")
 
 
 
